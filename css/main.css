@@ -1,0 +1,390 @@
+body {
+	 font-family: "Roboto", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: #3E3636;
+    overflow: visible;
+}
+
+textarea,
+button,
+button:hover {
+	font-family: inherit;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	transition: background 0.5s ease;
+}
+
+input {
+	outline: none;
+	border: none;
+	background-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1.1em;
+}
+
+p {
+	line-height: 1.4em;
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	display: flex;
+	text-decoration: none;
+	color: #000;
+	padding-bottom: 5px;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+	object-fit: cover;	
+}
+
+section	{
+	padding: 50px 0 50px;
+}
+
+.btn {
+	width: 217px;
+	height: 60px;
+	color: #fff;
+	background: #24A156;
+	text-align: center;
+	display: block;
+	padding: 20px 38px;
+	transition: background 0.5s ease;
+}
+
+.btn:hover {
+	border-bottom: none;
+	background: #045023;
+	color: #fff;
+	transition: background 0.5s ease;
+}
+
+.header {
+	background: #000 url('../img/Audi.png') no-repeat right top;
+	padding: 40px 0 170px;
+}
+
+.sticky-header.fix {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	padding: 34px 75px 33px;
+	background: #26262A;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+	z-index: 99;
+}
+
+
+.menu__item {
+	margin-right: 27px;
+	color: #fff;
+}
+
+.menu__item:last-child {
+	margin-right: 0;
+}
+
+.menu__link {
+	color: #fff;
+	transition:border-bottom, color 0.5s ease;
+}
+
+.menu__link:hover {
+	border-bottom: 1px solid #fff;
+	transition: border-bottom, color 0.5s ease;
+
+}
+
+.burger {
+	position: relative;
+	z-index: 60;
+	width: 30px;
+	height: 18px;
+}
+
+.burger span {
+	height: 2px;
+	width: 80%;
+	transform: scale(1);
+	background-color: #fff;
+}
+
+.burger::before, .burger::after {
+	content: '';
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background-color: #fff;
+	transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+	top: 0;
+}
+
+.burger::after {
+	bottom: 0;
+}
+
+.burger.active span {
+	transform: scale(0);
+}
+
+.burger.active::before {
+	top: 50%;
+	transform: rotate(-45deg) translate(0 -50%);
+}
+
+.burger.active::after {
+	bottom: 50%;
+	transform: rotate(45deg) translate(0 50%);
+}
+
+.open {
+	display: flex !important;
+}
+
+.header-phone img {
+	margin-left: auto;
+}
+
+.header-phone {
+	transition: transform 0.5s ease;
+}
+
+.header-phone:hover {
+	 transform: scale(1.2);
+}
+
+.offer {
+	max-width: 780px;
+}
+
+.offer__title {
+	font-size: 55px;
+	padding-top: 148px;
+	color: #fff;
+}
+
+.offer__text {
+	font-size: 20px;
+	font-weight: 400;
+	color: #fff;
+	margin: 32px 0 52px;
+}
+
+.section-title {
+	margin-bottom: 70px;
+}
+
+.brands-wrapper {
+	margin-bottom: 40px;
+}
+
+.brands-form {
+	max-width: 60%;
+	padding: 50px 50px;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+	margin: 40px auto 0;
+}
+
+.brands-form__title {
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 60px;
+}
+
+.brands-form input {
+	width: 100%;
+	font-size: 17px;
+	padding-bottom: 16px;
+	margin-bottom: 35px;
+	border-bottom: 1px solid #000000;
+}
+
+.brands-form input:last-child {
+	margin-bottom: 0;
+}
+
+.brands-form label {
+	color: #dc3545;
+	font-weight: 700;
+	margin-bottom: 30px;
+	margin-top: -35px;
+}
+
+.thank {
+	position: fixed;
+	text-align: center;
+	display: none;
+	top: 50%;
+	left: 50%;
+	padding: 70px;
+	transform: translate(-50%, -50%);
+	background-color: #E7E3DC;
+	z-index: 15;
+}
+
+.thank__desc {
+	font-weight: 700;
+}
+
+.gallery img {
+	margin-bottom: 30px;
+}
+
+.map {
+	width: 100%;
+}
+
+.contacts-add a {
+	color: #24A156;
+}
+
+.contacts-add a:hover {
+	color: #045023;
+}
+
+.footer {
+	background: #26262A;
+	padding: 71px 0 100px;
+}
+
+.footer-content__text {
+	color: #fff;
+}
+
+.footer-content__text a {
+	color: #fff;
+}
+
+
+
+/*  Responsive  */
+
+
+@media (max-width: 1200px) {
+	.menu__item {
+		margin-right: 15px;
+	}
+}
+
+
+@media (max-width: 992px) {
+	.menu {
+		position: fixed;
+		flex-direction: column;
+		top: 0;
+		right: 0;
+		background-color: #464A4D;
+		padding: 150px 50px 50px;
+		z-index: 50;
+		animation: burgerAnimation 0.5s;
+	}
+
+	@keyframes burgerAnimation {
+		from {opacity: 0;}
+		to {opacity: 1;}
+	}
+
+	.burger {
+		margin-left: auto;
+	}
+
+	.menu__item {
+		font-size: 15px;
+		margin: 0 30px 30px 0;
+	}
+
+	.menu__item:last-child {
+		margin-bottom: 0;
+	}
+
+	.mufflers img {
+		margin-bottom: 30px;
+	}
+
+	.map {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 768px) {
+	.offer__title {
+		padding-top: 67px;
+	}
+
+	.brands-form {
+		max-width: 100%;
+	}
+
+	.footer-content {
+		margin-bottom: 40px;
+	}
+
+	.section-title {
+    	margin-bottom: 45px;
+	}
+
+}
+
+@media (max-width: 576px) {
+	.sticky-header.fix {
+		padding: 15px 30px 15px;
+	}
+	
+	section {
+		padding: 25px 0 25px;
+	}
+
+	.offer__title {
+		font-size: 45px;
+	}
+
+	.section-title {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 450px) {
+	.header {
+		padding: 40px 0 100px;
+	}
+
+	.offer__title {
+		font-size: 34px;
+	}
+
+	.offer__text {
+		font-size: 18px;
+	}
+
+	.section-title {
+		font-size: 20px;
+	}
+
+	.brands-form__title {
+		font-size: 14px;
+		margin-bottom: 35px;
+	}
+}
